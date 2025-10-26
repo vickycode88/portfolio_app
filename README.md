@@ -6,7 +6,7 @@ Project Summary : A responsive personal portfolio website built with React.js an
 
 This project has been successfully deployed on Vercel platform.
 
-project deployment platform name: Vercel.
+project deployment platform name: Vercel.com
 
 Project Link : https://portfolio-app-sigma-dusky.vercel.app/
 
