@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import "./App.css";
 
-export default function App() {
+const About = lazy(() => import("./components/About"));
+const Projects = lazy(() => import("./components/Projects"));
+const Skills = lazy(() => import("./components/Skills"));
+const Resume = lazy(() => import("./components/Resume"));
+const Contact = lazy(() => import("./components/Contact"));
+
+function App() {
   return (
-    <div>App hello world!</div>
-  )
+    <Router>
+      <Navbar />
+      <Suspense fallback={<div className="text-center p-5">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Suspense>
+    </Router>
+  );
 }
+
+export default App;
