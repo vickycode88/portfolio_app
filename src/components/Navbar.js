@@ -25,49 +25,86 @@
 
 // export default Navbar;
 
-
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-
 function Navbar() {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const location = useLocation();
+
+  // Collapse navbar when a link is clicked
+  const handleLinkClick = () => {
+    setIsCollapsed(true);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">My Portfolio</Link>
+        <Link className="navbar-brand" to="/" onClick={handleLinkClick}>
+          My Portfolio
+        </Link>
 
         {/* Toggler Button */}
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={() => setIsCollapsed(!isCollapsed)}
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={!isCollapsed}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* Collapsible Section */}
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse ${!isCollapsed ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</Link>
+              <Link
+                className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+                to="/"
+                onClick={handleLinkClick}
+              >
+                About
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/projects" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</Link>
+              <Link
+                className={`nav-link ${location.pathname === "/projects" ? "active" : ""}`}
+                to="/projects"
+                onClick={handleLinkClick}
+              >
+                Projects
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/skills" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Skills</Link>
+              <Link
+                className={`nav-link ${location.pathname === "/skills" ? "active" : ""}`}
+                to="/skills"
+                onClick={handleLinkClick}
+              >
+                Skills
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/resume" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Resume</Link>
+              <Link
+                className={`nav-link ${location.pathname === "/resume" ? "active" : ""}`}
+                to="/resume"
+                onClick={handleLinkClick}
+              >
+                Resume
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</Link>
+              <Link
+                className={`nav-link ${location.pathname === "/contact" ? "active" : ""}`}
+                to="/contact"
+                onClick={handleLinkClick}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
