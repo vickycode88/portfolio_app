@@ -2,7 +2,7 @@ portfolio_app
 
 Vicky Das Portfolio Website.
 
-Project Summary : A responsive personal portfolio website built with React.js and Bootstrap 5. This project showcases my personal information (About me), skills, projects, Resume and contact information, providing a professional online presence.
+Project Summary : A responsive personal portfolio website built with React.js and Bootstrap 5. This project showcases my personal information (About me), Skills, Projects, Resume and Contact information, providing a professional online presence.
 
 This project has been successfully deployed on Vercel platform.
 
