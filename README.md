@@ -8,7 +8,7 @@ This project has been successfully deployed on Vercel platform.
 
 project deployment platform name: Vercel.com
 
-Project Link : https://portfolio-app-sigma-dusky.vercel.app/
+Project Deployed Link : https://portfolio-app-sigma-dusky.vercel.app/
 
 Github Repository Link : https://github.com/vickycode88/portfolio_app 
 
