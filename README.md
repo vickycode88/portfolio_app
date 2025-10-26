@@ -1,10 +1,18 @@
 portfolio_app
 
-Vicky Das Portfolio Website😁
+Vicky Das Portfolio Website.
 
-A responsive personal portfolio website built with React.js and Bootstrap 5. This project showcases my personal information, skills, projects, and contact information, providing a professional online presence.
+Project Summary : A responsive personal portfolio website built with React.js and Bootstrap 5. This project showcases my personal information (About me), skills, projects, and contact information, providing a professional online presence.
 
----
+This project has been successfully deployed on Vercel platform.
+
+project deployment platform name: Vercel.
+
+Project Link : https://portfolio-app-sigma-dusky.vercel.app/
+
+Github Repository Link : https://github.com/vickycode88/portfolio_app 
+
+Installation Required : npm install bootstrap ,  npm install react-router-dom.
 
 Features:
 
@@ -16,6 +24,11 @@ Features:
 6.Responsive Design: Fully responsive layout for desktops, tablets, and mobile devices.
 7.Lazy Loading: Images and components are lazy-loaded to enhance performance.
 8.Optimized for Production: Minimized JS and CSS for faster load times.
+
+
+
+
+
 
 
 
