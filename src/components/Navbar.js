@@ -34,7 +34,7 @@ function Navbar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const location = useLocation();
 
-  // Collapse navbar when a link is clicked
+
   const handleLinkClick = () => {
     setIsCollapsed(true);
   };
@@ -46,7 +46,7 @@ function Navbar() {
           My Portfolio
         </Link>
 
-        {/* Toggler Button */}
+      
         <button
           className="navbar-toggler"
           type="button"
@@ -58,7 +58,7 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Collapsible Section */}
+        
         <div className={`collapse navbar-collapse ${!isCollapsed ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
